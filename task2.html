@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid box</title>
+  <style>
+    html, body {
+  margin: 0;   
+  padding: 0;  
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px; 
+  padding:0px;
+}
+.grid-container > div {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.grid-container > div::before {
+  content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.";
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div></div>
+  <div></div>
+  <div></div>  
+  <div></div>
+  <div></div>
+  <div></div>  
+</div>
+
+</body>
+</html>
+

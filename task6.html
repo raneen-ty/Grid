@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تخطيط CSS Grid Template Areas</title>
+    
+    <style>
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #ff416c, #ff4b2b, #8a2be2); 
+            font-family: Arial, sans-serif;
+            padding: 20px 0;
+        }
+
+    
+        .grid-container {
+            display: grid;
+      
+            grid-template-columns: repeat(9, 1fr); 
+            gap: 5px;
+            width: 90%;
+            max-width: 1000px;
+            
+   
+            grid-template-areas: 
+                "a1 a2 a4 a5 a6 a7 a8 a9 ." 
+                "a10 a11 a12 a13 a14 a15 a16 a17 ."
+                "a18 a19 a20 a21 a22 a23 a24 a25 ."
+                "a3 a3 a3 a3 a3 a3 a3 a3 a3" 
+                "a26 a27 a28 a29 a30 . . . ."; 
+        }
+        
+        .grid-item {
+            background-color: #ffc107;
+            color: #333;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+        
+       
+        .item-1 { grid-area: a1; }
+        .item-2 { grid-area: a2; }
+        .item-4 { grid-area: a4; }
+        .item-5 { grid-area: a5; }
+        .item-6 { grid-area: a6; }
+        .item-7 { grid-area: a7; }
+        .item-8 { grid-area: a8; }
+        .item-9 { grid-area: a9; }
+
+        .item-10 { grid-area: a10; }
+        .item-11 { grid-area: a11; }
+        .item-12 { grid-area: a12; }
+        .item-13 { grid-area: a13; }
+        .item-14 { grid-area: a14; }
+        .item-15 { grid-area: a15; }
+        .item-16 { grid-area: a16; }
+        .item-17 { grid-area: a17; }
+        
+
+        .item-18 { grid-area: a18; }
+        .item-19 { grid-area: a19; }
+        .item-20 { grid-area: a20; }
+        .item-21 { grid-area: a21; }
+        .item-22 { grid-area: a22; }
+        .item-23 { grid-area: a23; }
+        .item-24 { grid-area: a24; }
+        .item-25 { grid-area: a25; }
+
+        .item-3 { 
+            grid-area: a3;
+            height: 50px; 
+            width: 890px;
+        }
+
+ 
+        .item-26 { grid-area: a26; }
+        .item-27 { grid-area: a27; }
+        .item-28 { grid-area: a28; }
+        .item-29 { grid-area: a29; }
+        .item-30 { grid-area: a30; }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item-1">1</div>
+        <div class="grid-item item-2">2</div>
+        <div class="grid-item item-4">4</div>
+        <div class="grid-item item-5">5</div>
+        <div class="grid-item item-6">6</div>
+        <div class="grid-item item-7">7</div>
+        <div class="grid-item item-8">8</div>
+        <div class="grid-item item-9">9</div>
+
+        <div class="grid-item item-10">10</div>
+        <div class="grid-item item-11">11</div>
+        <div class="grid-item item-12">12</div>
+        <div class="grid-item item-13">13</div>
+        <div class="grid-item item-14">14</div>
+        <div class="grid-item item-15">15</div>
+        <div class="grid-item item-16">16</div>
+        <div class="grid-item item-17">17</div>
+
+        <div class="grid-item item-18">18</div>
+        <div class="grid-item item-19">19</div>
+        <div class="grid-item item-20">20</div>
+        <div class="grid-item item-21">21</div>
+        <div class="grid-item item-22">22</div>
+        <div class="grid-item item-23">23</div>
+        <div class="grid-item item-24">24</div>
+        <div class="grid-item item-25">25</div>
+
+        <div class="grid-item item-3">3</div>
+
+        <div class="grid-item item-26">26</div>
+        <div class="grid-item item-27">27</div>
+        <div class="grid-item item-28">28</div>
+        <div class="grid-item item-29">29</div>
+        <div class="grid-item item-30">30</div>
+    </div>
+</body>
+</html>

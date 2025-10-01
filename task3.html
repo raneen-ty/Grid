@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #f8f9fa; 
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar nav"
+        "sidebar article"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 70px auto 1fr 50px;
+      gap: 15px;
+      margin: 20px;
+      height: calc(100vh - 40px);
+    }
+
+    header, aside, nav, article, footer {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      display: flex;
+      align-items:flex-start;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      grid-area: header;
+      background: gold;
+      color: white;
+      font-weight: bold;
+      font-size:30px;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: tomato;
+      color: white;
+      font-weight: bold;
+      font-size:30px;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #40E0D0;;
+      color: white;
+      font-weight: bold;
+      font-size:30px;
+    }
+
+    article {
+      grid-area: article;
+      background: #e6e6fa;
+      color: white;
+      font-weight: bold;
+      font-size:30px;
+       display: flex;
+      flex-direction: column;
+      align-items: flex-start;  
+     }
+
+    footer {
+      grid-area: footer;
+      background: black;
+      color: white;
+      font-weight: bold;
+      font-size:30px;
+      height:45px;
+    }
+    p {
+    font-size: 15px;      
+    margin-top: 20px;    
+    text-align: left;    
+    }
+.p1 {
+  font-weight: bold;
+  font-size: 30px;
+  height: 45px;
+  text-align: center;   
+  width: 100%;          
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <nav>Nav</nav>
+    <article><p class="p1">Article</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur bibendum turpis quis interdum semper. Sed at pharetra neque, nec lacinia diam. Suspendisse quis faucibus mi, aliquam porttitor ipsum. Vivamus condimentum eros id mattis pharetra. Duis verus eros nibh. Donec a venenatis eros. Fusce in mauris massa. Donec est metus, thoncus eu leo ​​sed, aliquet posuere nial.</p>
+ <p>Cran ut ez in nibh accumsan ullamcorper. Fusce ruirum, metus id porta porttitor, leo ipsum congue velit, nu hendrerit lactus nisi a odio Pellentesque tristique aros id nibh linibus euismod. Cras suscipit volutpat elit eget pulvinar. Vivamus at blandii leo. Aenean sodales ex non maasa efficitur, ot egestas nequus dapibus. In consequat hendrerit ax, nec finibus magna faucibus eu. Aliquam a libero noo eral sollicitudin condimentum. In ac fringilla nisi. Sed pharetra ut turpis id luctus. Proin posuere Suctiot ac tempos luctus. Dorme vitas sut et neque faucibus posuere. Class aptent taciti sociosqu ad Bars Koexpament per conubia.</p>
+  </article>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
+
